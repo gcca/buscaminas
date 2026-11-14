@@ -10,12 +10,15 @@ struct ContentView: View {
         HStack {
           Button("Restart") { game.restart() }
           Button("Shuffle") { game.shuffle() }
+          StepControl(title: "Mines", value: game.mines) { step in
+            game.setMines(game.mines + step)
+          }
         }
         HStack {
-          SizeControl(title: "Rows", value: game.rows) { step in
+          StepControl(title: "Rows", value: game.rows) { step in
             game.resize(rows: game.rows + step, cols: game.cols)
           }
-          SizeControl(title: "Cols", value: game.cols) { step in
+          StepControl(title: "Cols", value: game.cols) { step in
             game.resize(rows: game.rows, cols: game.cols + step)
           }
         }
@@ -29,7 +32,7 @@ struct ContentView: View {
   }
 }
 
-private struct SizeControl: View {
+private struct StepControl: View {
   let title: String
   let value: Int
   let change: (Int) -> Void

@@ -8,14 +8,19 @@ final class Game {
 
   private(set) var rows: Int
   private(set) var cols: Int
+  private(set) var mines: Int
   private var board: bmios.GameBoard
 
-  var mines: Int { Self.mines(rows, cols) }
+  var maxMines: Int { rows * cols - 1 }
 
-  init(rows: Int = 9, cols: Int = 9) {
+  init(rows: Int = 9, cols: Int = 9, mines: Int = 10) {
+    let rows = Self.clampSize(rows)
+    let cols = Self.clampSize(cols)
+    let mines = min(max(mines, 1), rows * cols - 1)
     self.rows = rows
     self.cols = cols
-    board = bmios.GameBoard(rows, cols, Self.mines(rows, cols))
+    self.mines = mines
+    board = bmios.GameBoard(rows, cols, mines)
   }
 
   func cell(_ row: Int, _ col: Int) -> Character {
@@ -35,15 +40,23 @@ final class Game {
   }
 
   func resize(rows: Int, cols: Int) {
-    let rows = min(max(rows, Self.sizes.lowerBound), Self.sizes.upperBound)
-    let cols = min(max(cols, Self.sizes.lowerBound), Self.sizes.upperBound)
+    let rows = Self.clampSize(rows)
+    let cols = Self.clampSize(cols)
     guard rows != self.rows || cols != self.cols else { return }
     self.rows = rows
     self.cols = cols
+    mines = min(mines, maxMines)
     restart()
   }
 
-  private static func mines(_ rows: Int, _ cols: Int) -> Int {
-    max(1, (rows * cols * 10 + 40) / 81)
+  func setMines(_ count: Int) {
+    let count = min(max(count, 1), maxMines)
+    guard count != mines else { return }
+    mines = count
+    restart()
+  }
+
+  private static func clampSize(_ value: Int) -> Int {
+    min(max(value, sizes.lowerBound), sizes.upperBound)
   }
 }
