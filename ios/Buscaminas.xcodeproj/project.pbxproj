@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0A000000000000000000001 /* BuscaminasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000001 /* BuscaminasApp.swift */; };
+		B0A000000000000000000002 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000002 /* Game.swift */; };
+		B0A000000000000000000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000003 /* ContentView.swift */; };
+		B0A000000000000000000004 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000004 /* BoardView.swift */; };
+		B0A000000000000000000005 /* buscaminas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000007 /* buscaminas.cpp */; };
+		B0B000000000000000000001 /* BuscaminasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000001 /* BuscaminasApp.swift */; };
+		B0B000000000000000000002 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000002 /* Game.swift */; };
+		B0B000000000000000000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000003 /* ContentView.swift */; };
+		B0B000000000000000000004 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000004 /* BoardView.swift */; };
+		B0B000000000000000000005 /* buscaminas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000007 /* buscaminas.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F00000000000000000000001 /* BuscaminasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaminasApp.swift; sourceTree = "<group>"; };
+		F00000000000000000000002 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F00000000000000000000003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F00000000000000000000004 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		F00000000000000000000005 /* BuscaminasBridge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BuscaminasBridge.hpp; sourceTree = "<group>"; };
+		F00000000000000000000006 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		F00000000000000000000007 /* buscaminas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = buscaminas.cpp; sourceTree = "<group>"; };
+		F00000000000000000000008 /* buscaminas.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = buscaminas.hpp; sourceTree = "<group>"; };
+		F00000000000000000000009 /* Buscaminas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buscaminas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0000000000000000000000A /* BuscaminasWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuscaminasWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0A000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000002 /* Shared */,
+				A00000000000000000000003 /* Bridge */,
+				A00000000000000000000004 /* Core */,
+				A00000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A00000000000000000000002 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000001 /* BuscaminasApp.swift */,
+				F00000000000000000000002 /* Game.swift */,
+				F00000000000000000000003 /* ContentView.swift */,
+				F00000000000000000000004 /* BoardView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000003 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000005 /* BuscaminasBridge.hpp */,
+				F00000000000000000000006 /* module.modulemap */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000004 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000008 /* buscaminas.hpp */,
+				F00000000000000000000007 /* buscaminas.cpp */,
+			);
+			name = Core;
+			path = ../buscaminas;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000009 /* Buscaminas.app */,
+				F0000000000000000000000A /* BuscaminasWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0A000000000000000000001 /* Buscaminas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0A000000000000000000001 /* Build configuration list for PBXNativeTarget "Buscaminas" */;
+			buildPhases = (
+				C0A000000000000000000002 /* Sources */,
+				C0A000000000000000000001 /* Frameworks */,
+				C0A000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Buscaminas;
+			productName = Buscaminas;
+			productReference = F00000000000000000000009 /* Buscaminas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0B000000000000000000001 /* BuscaminasWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0B000000000000000000001 /* Build configuration list for PBXNativeTarget "BuscaminasWatch" */;
+			buildPhases = (
+				C0B000000000000000000002 /* Sources */,
+				C0B000000000000000000001 /* Frameworks */,
+				C0B000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BuscaminasWatch;
+			productName = BuscaminasWatch;
+			productReference = F0000000000000000000000A /* BuscaminasWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D00000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2720;
+				LastUpgradeCheck = 2720;
+			};
+			buildConfigurationList = E00000000000000000000001 /* Build configuration list for PBXProject "Buscaminas" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A00000000000000000000001;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A00000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0A000000000000000000001 /* Buscaminas */,
+				D0B000000000000000000001 /* BuscaminasWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0A000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0A000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A000000000000000000001 /* BuscaminasApp.swift in Sources */,
+				B0A000000000000000000002 /* Game.swift in Sources */,
+				B0A000000000000000000003 /* ContentView.swift in Sources */,
+				B0A000000000000000000004 /* BoardView.swift in Sources */,
+				B0A000000000000000000005 /* buscaminas.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B000000000000000000001 /* BuscaminasApp.swift in Sources */,
+				B0B000000000000000000002 /* Game.swift in Sources */,
+				B0B000000000000000000003 /* ContentView.swift in Sources */,
+				B0B000000000000000000004 /* BoardView.swift in Sources */,
+				B0B000000000000000000005 /* buscaminas.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E00000000000000000000002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../buscaminas";
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Bridge";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		E00000000000000000000003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../buscaminas";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Bridge";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0A000000000000000000002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Buscaminas;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.buscaminas.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx appletvos appletvsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		E0A000000000000000000003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Buscaminas;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.buscaminas.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx appletvos appletvsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+		E0B000000000000000000002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Buscaminas;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.buscaminas.app.watch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		E0B000000000000000000003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Buscaminas;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.buscaminas.app.watch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E00000000000000000000001 /* Build configuration list for PBXProject "Buscaminas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E00000000000000000000002 /* Debug */,
+				E00000000000000000000003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0A000000000000000000001 /* Build configuration list for PBXNativeTarget "Buscaminas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0A000000000000000000002 /* Debug */,
+				E0A000000000000000000003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0B000000000000000000001 /* Build configuration list for PBXNativeTarget "BuscaminasWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0B000000000000000000002 /* Debug */,
+				E0B000000000000000000003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D00000000000000000000001 /* Project object */;
+}

@@ -1,0 +1,5 @@
+module BuscaminasBridge {
+  header "BuscaminasBridge.hpp"
+  requires cplusplus
+  export *
+}
