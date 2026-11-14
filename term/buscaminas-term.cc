@@ -110,6 +110,11 @@ int main(int argc, char *argv[]) {
       cursor.Right();
       break;
     case 's': board->Shuffle(); break;
+    case 'r':
+    case 'R':
+      board = buscaminas::Board::Make(state.rows, state.cols, state.mines);
+      board->Shuffle();
+      break;
     case 'q': goto end;
     }
   }
