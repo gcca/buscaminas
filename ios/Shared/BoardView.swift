@@ -17,6 +17,7 @@ struct BoardView: View {
                 Text(CellLabel.text(game.cell(row, col)))
               }
               .buttonStyle(CellStyle(value: game.cell(row, col), size: size))
+              .focusEffectDisabled()
             }
           }
         }
