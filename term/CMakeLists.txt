@@ -1,9 +1,5 @@
-cmake_minimum_required(VERSION 3.25)
-project(buscaminas VERSION 1.0 LANGUAGES CXX)
-
-add_subdirectory(../buscaminas libbuscaminas)
-
 add_executable(buscaminas-term buscaminas-term.cc)
-find_library(TBOX2 libtermbox2.a PATHS .)
-target_include_directories(buscaminas-term PRIVATE ../buscaminas)
+target_compile_features(buscaminas-term PRIVATE cxx_std_20)
+find_library(TBOX2 NAMES libtermbox2.a
+  PATHS "${CMAKE_CURRENT_SOURCE_DIR}" NO_DEFAULT_PATH REQUIRED)
 target_link_libraries(buscaminas-term buscaminas ${TBOX2})

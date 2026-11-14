@@ -1,12 +1,11 @@
-cmake_minimum_required(VERSION 3.25)
-project(buscaminas VERSION 1.0 LANGUAGES CXX)
-
 add_library(buscaminas buscaminas.cpp)
+target_include_directories(buscaminas PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_compile_features(buscaminas PUBLIC cxx_std_14)
 
 if (BUSCAMINAS_TESTS)
   find_package(GTest REQUIRED)
+  include(GoogleTest)
   add_executable(buscaminas-test buscaminas-test.cc)
   target_link_libraries(buscaminas-test GTest::gtest_main buscaminas)
-  enable_testing()
   gtest_discover_tests(buscaminas-test)
 endif()
